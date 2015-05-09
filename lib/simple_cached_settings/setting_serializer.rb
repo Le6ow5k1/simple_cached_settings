@@ -1,4 +1,4 @@
-module SimpleSettings
+module SimpleCachedSettings
   class SettingSerializer
     ALLOWED_VALUE_TYPES = [Fixnum, String, Float, TrueClass, FalseClass]
 

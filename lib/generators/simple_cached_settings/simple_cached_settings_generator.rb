@@ -1,6 +1,6 @@
 require 'rails/generators/migration'
 
-class SimpleSettingsGenerator < Rails::Generators::NamedBase
+class SimpleCachedSettingsGenerator < Rails::Generators::NamedBase
   include Rails::Generators::Migration
 
   argument :name, type: :string, default: 'my_settings'

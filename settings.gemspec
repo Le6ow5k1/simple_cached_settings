@@ -1,18 +1,18 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'simple_settings/version'
+require 'simple_cached_settings/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'simple_settings'
-  spec.version       = Settings::VERSION
+  spec.name          = 'simple_cached_settings'
+  spec.version       = SimpleCachedSettings::VERSION
   spec.authors       = ['Le6ow5k1']
   spec.email         = ['Le6oww5k1@gmail.com']
   spec.summary       = %q{Gem for storing global configuration settings in an ActiveRecord::Model}
-  spec.homepage      = 'https://github.com/Le6ow5k1/simple_settings'
+  spec.homepage      = 'https://github.com/Le6ow5k1/simple_cached_settings'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split('\x0')
+  spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']

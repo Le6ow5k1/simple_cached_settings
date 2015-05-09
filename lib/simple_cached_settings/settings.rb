@@ -1,4 +1,4 @@
-module SimpleSettings
+module SimpleCachedSettings
   class Settings < ActiveRecord::Base
     self.table_name = 'settings'
 
@@ -14,8 +14,8 @@ module SimpleSettings
       end
 
       def read(key)
-        setting = Rails.cache.read(__cache_key(key))
-        return setting.value if setting
+        value = Rails.cache.read(__cache_key(key))
+        return value if value
 
         setting = find_by(key: key)
         setting.value if setting

@@ -1,4 +1,4 @@
-# Simple Settings
+# Simple Cached Settings
 
 Gem for storing global configuration settings in an ActiveRecord::Model.
 
@@ -6,7 +6,7 @@ Gem for storing global configuration settings in an ActiveRecord::Model.
 
 Add this line to your application's Gemfile:
 
-    gem 'simple_settings'
+    gem 'simple_cached_settings'
 
 And then execute:
 
@@ -14,13 +14,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install simple_settings
+    $ gem install simple_cached_settings
 
 ## Setup
 
 Generate settings model and migration:
 
-    $ rails g simple_settings <settings_name>
+    $ rails g simple_cached_settings <settings_name>
 
 Apply migration:
     
@@ -29,7 +29,7 @@ Apply migration:
 Now you have the model that looks something like this:
 
 ```ruby
-class MySettings < SimpleSettings::Settings
+class MySettings < SimpleCachedSettings::Settings
 end
 ```
 
