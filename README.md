@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/simple_cached_settings.svg)](http://badge.fury.io/rb/simple_cached_settings)
 # Simple Cached Settings
 
 Gem for storing global configuration settings in an ActiveRecord::Model.
