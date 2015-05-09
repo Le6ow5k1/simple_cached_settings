@@ -7,7 +7,7 @@ require 'rails/railtie'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'rails'))
-require 'simple_settings'
+require 'simple_cached_settings'
 
 ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: ':memory:')
 ActiveRecord::Schema.verbose = false
@@ -25,8 +25,7 @@ module Rails
   end
 end
 
-class ::MySettings < SimpleSettings::Settings
-  self.table_name = 'settings'
+class ::MySettings < SimpleCachedSettings::Settings
 end
 
 RSpec.configure do |config|

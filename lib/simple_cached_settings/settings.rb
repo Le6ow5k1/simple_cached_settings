@@ -22,7 +22,7 @@ module SimpleCachedSettings
       end
 
       def __cache_key(setting_key)
-        "simple_settings:#{setting_key}"
+        "simple_cached_settings:#{setting_key}"
       end
     end
 

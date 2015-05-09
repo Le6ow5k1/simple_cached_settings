@@ -6,7 +6,9 @@ Gem for storing global configuration settings in an ActiveRecord::Model.
 
 Add this line to your application's Gemfile:
 
-    gem 'simple_cached_settings'
+```ruby
+gem 'simple_cached_settings'
+```
 
 And then execute:
 
@@ -44,9 +46,16 @@ MySettings.read(:foo)
 
 It's possible to store settings values of four types: String, Integer, Float and Boolean
 
+```ruby
+MySettings.write(:foo, 'bar')
+MySettings.write(:number_of_chairs, 12)
+MySettings.write(:gods_mode, true)
+MySettings.write(:caliber, 7.62)
+```
+
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/settings/fork )
+1. Fork it ( https://github.com/Le6ow5k1/simple_cached_settings/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
