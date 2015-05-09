@@ -3,6 +3,7 @@ require 'active_record'
 require 'active_support'
 require 'sqlite3'
 require 'database_cleaner'
+require 'rails/railtie'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'rails'))
@@ -18,11 +19,19 @@ ActiveRecord::Schema.define(version: 1) do
   end
 end
 
+module Rails
+  def self.cache
+    @cache ||= ActiveSupport::Cache::MemoryStore.new
+  end
+end
+
 class ::MySettings < SimpleSettings::Settings
   self.table_name = 'settings'
 end
 
 RSpec.configure do |config|
+  config.warnings = false
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
@@ -43,10 +52,6 @@ RSpec.configure do |config|
   end
 
   config.before(:all) do
-    # Rails.cache.clear
+    Rails.cache.clear
   end
-
-  # config.after(:all) do
-  #   Object.send(:remove_const, :Setting)
-  # end
 end

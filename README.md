@@ -26,7 +26,7 @@ Apply migration:
     
     $ rake db:migrate
 
-Now you have the model that looking something like this
+Now you have the model that looks something like this:
 
 ```ruby
 class MySettings < SimpleSettings::Settings
